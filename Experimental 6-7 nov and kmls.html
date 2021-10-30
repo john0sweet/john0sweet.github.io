@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+	<head>
+		<title>Maynard Ten Tors Tracker 6-7 Nov 21</title>
+		<base target="_top"></base>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta name="geo.position" content="50.529296; -3.8584111" />
+		<meta name="ICBM" content="50.529296, -3.8584111" />
+	</head>
+	<body style="margin:0px;">
+		
+		<script type="text/javascript">
+			API = 'leaflet'; // can be either 'leaflet' or 'google'
+			if (self.API && API.match(/^g/i)) {
+				google_api_key = ''; // Your project's Google Maps API key goes here (https://code.google.com/apis/console)
+				language_code = '';
+				document.writeln('<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=geometry&amp;language='+(self.language_code?self.language_code:'')+'&amp;key='+(self.google_api_key?self.google_api_key:'')+'" type="text/javascript"><'+'/script>');
+			} else {
+				document.writeln('<link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet" />');
+				document.writeln('<script src="https://unpkg.com/leaflet/dist/leaflet.js" type="text/javascript"><'+'/script>');
+			}
+			thunderforest_api_key = ''; // To display OpenStreetMap tiles from ThunderForest, you need a key (https://www.thunderforest.com/docs/apikeys/)
+			ign_api_key = ''; // To display topo tiles from IGN.fr, you need a key (https://api.ign.fr/)
+		</script>
+
+		
+		<!--
+			If you want to transplant this map into another Web page, by far the best method is to
+			simply include it in a IFRAME tag (see https://www.gpsvisualizer.com/faq.html#google_html).
+			But, if you must paste the code into another page, be sure to include all of these parts:
+			   1. The "div" tags that contain the map and its widgets, below
+			   2. Three sections of JavaScript code:
+			      a. The API code (from googleapis.com or unpkg.com/leaflet), above
+			      b. "gv_options" and the code that calls a .js file on gpsvisualizer.com
+			      c. The "GV_Map" function, which contains all the geographic info for the map
+		-->
+		<div style="margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:0px;">
+			<div id="gmap_div" style="width:700px; height:659px; margin:0px; margin-right:12px; background-color:#f0f0f0; float:left; overflow:hidden;">
+				<p style="text-align:center; font:10px Arial;">Maynard Ten Tors Tracker 6-7 Nov 21 - <br /><br />Please wait while the map data loads...</p>
+			</div>
+				
+			<div id="gv_infobox" class="gv_infobox" style="font:11px Arial; border:solid #666666 1px; background-color:#ffffff; padding:4px; overflow:auto; display:none; max-width:400px;">
+				<!-- Although GPS Visualizer didn't create an legend/info box with your map, you can use this space for something else if you'd like; enable it by setting gv_options.infobox_options.enabled to true -->
+			</div>
+
+
+			<div id="gv_tracklist" class="gv_tracklist" style="font:11px Arial; line-height:11px; background-color:#ffffff; overflow:auto; display:none;"><!-- --></div>
+
+			<div id="gv_marker_list" class="gv_marker_list" style="background-color:#ffffff; overflow:auto; display:none;"><!-- --></div>
+
+			<div id="gv_clear_margins" style="height:0px; clear:both;"><!-- clear the "float" --></div>
+		</div>
+
+		
+		<!-- begin GPS Visualizer setup script (must come after loading of API code) -->
+		<script type="text/javascript">
+			/* Global variables used by the GPS Visualizer functions (20211017065858): */
+			gv_options = {};
+			
+			// basic map parameters:
+			gv_options.center = [50.52497,-3.85607];  // [latitude,longitude] - be sure to keep the square brackets
+			gv_options.zoom = 12;  // higher number means closer view; can also be 'auto' for automatic zoom/center based on map elements
+			gv_options.map_type = 'TF_OUTDOORS';  // popular map_type choices are 'GV_STREET', 'GV_SATELLITE', 'GV_HYBRID', 'GV_TERRAIN', 'GV_OSM', 'GV_TOPO_US', 'GV_TOPO_WORLD' (https://www.gpsvisualizer.com/misc/leaflet_map_types.html)
+			gv_options.map_opacity = 1.00;  // number from 0 to 1
+			gv_options.full_screen = true;  // true|false: should the map fill the entire page (or frame)?
+			gv_options.width = 700;  // width of the map, in pixels
+			gv_options.height = 659;  // height of the map, in pixels
+			
+			gv_options.map_div = 'gmap_div';  // the name of the HTML "div" tag containing the map itself; usually 'gmap_div'
+			gv_options.doubleclick_zoom = true;  // true|false: zoom in when mouse is double-clicked?
+			gv_options.doubleclick_center = true;  // true|false: re-center the map on the point that was double-clicked?
+			gv_options.scroll_zoom = true; // true|false; or 'reverse' for down=in and up=out
+			gv_options.page_scrolling = true; // true|false; does the map relenquish control of the scroll wheel when embedded in scrollable pages?
+			gv_options.autozoom_adjustment = 0;
+			gv_options.centering_options = { 'open_info_window':true, 'partial_match':true, 'center_key':'center', 'default_zoom':null } // URL-based centering (e.g., ?center=name_of_marker&zoom=14)
+			gv_options.street_view = false; // true|false: allow Google Street View on the map (Google Maps only)
+			gv_options.tilt = false; // true|false: allow Google Maps to show 45-degree tilted aerial imagery?
+			gv_options.disable_google_pois = false;  // true|false: if you disable clickable POIs on Google Maps, you also lose the labels on parks, airports, etc.
+			gv_options.animated_zoom = true; // true|false: only affects Leaflet maps
+			
+			// widgets on the map:
+			gv_options.zoom_control = 'large'; // 'large'|'small'|'none'
+			gv_options.recenter_button = true; // true|false: is there a 'click to recenter' button above the zoom control?
+			gv_options.geolocation_control = true; // true|false; only works on secure servers
+			gv_options.geolocation_options = { center:true, zoom:null, marker:true, info_window:true };
+			gv_options.scale_control = true; // true|false
+			gv_options.map_opacity_control = false;  // true|false
+			gv_options.map_type_control = {};  // widget to change the background map
+			  gv_options.map_type_control.visible = true; // true|false: is a map type control placed on the map itself?
+			  gv_options.map_type_control.filter = true;  // true|false: when map loads, are irrelevant maps ignored?
+			  gv_options.map_type_control.excluded = [];  // comma-separated list of quoted map IDs that will never show in the list ('included' also works)
+			gv_options.center_coordinates = true;  // true|false: show a "center coordinates" box and crosshair?
+			gv_options.measurement_tools = true; // true|false: put a measurement ruler on the map?
+			gv_options.measurement_options = { visible:false, distance_color:'', area_color:'' };
+			gv_options.crosshair_hidden = true;  // true|false: hide the crosshair initially?
+			gv_options.mouse_coordinates = false;  // true|false: show a "mouse coordinates" box?
+			gv_options.utilities_menu = { 'maptype':true, 'opacity':true, 'measure':true, 'geolocate':false, 'profile':false, 'export':false };
+			gv_options.allow_export = false;  // true|false
+			
+			gv_options.infobox_options = {}; // options for a floating info box (id="gv_infobox"), which can contain anything
+			  gv_options.infobox_options.enabled = true;  // true|false: enable or disable the info box altogether
+			  gv_options.infobox_options.position = ['LEFT_TOP',52,4];  // [Google anchor name, relative x, relative y]
+			  gv_options.infobox_options.draggable = true;  // true|false: can it be moved around the screen?
+			  gv_options.infobox_options.collapsible = true;  // true|false: can it be collapsed by double-clicking its top bar?
+			
+			// track-related options:
+			gv_options.track_optimization = 1; // sets Leaflet's smoothFactor parameter
+			gv_options.track_tooltips = false; // true|false: should the name of a track appear on the map when you mouse over the track itself?
+			gv_options.tracklist_options = {}; // options for a floating list of the tracks visible on the map
+			  gv_options.tracklist_options.enabled = true;  // true|false: enable or disable the tracklist altogether
+			  gv_options.tracklist_options.position = ['RIGHT_TOP',4,32];  // [Google anchor name, relative x, relative y]
+			  gv_options.tracklist_options.min_width = 40; // minimum width of the tracklist, in pixels
+			  gv_options.tracklist_options.max_width = 180; // maximum width of the tracklist, in pixels
+			  gv_options.tracklist_options.min_height = 0; // minimum height of the tracklist, in pixels; if the list is longer, scrollbars will appear
+			  gv_options.tracklist_options.max_height = 289; // maximum height of the tracklist, in pixels; if the list is longer, scrollbars will appear
+			  gv_options.tracklist_options.desc = false;  // true|false: should tracks' descriptions be shown in the list
+			  gv_options.tracklist_options.toggle = false;  // true|false: should clicking on a track's name turn it on or off?
+			  gv_options.tracklist_options.checkboxes = true;  // true|false: should there be a separate icon/checkbox for toggling visibility?
+			  gv_options.tracklist_options.zoom_links = true;  // true|false: should each item include a small icon that will zoom to that track?
+			  gv_options.tracklist_options.highlighting = true;  // true|false: should the track be highlighted when you mouse over the name in the list?
+			  gv_options.tracklist_options.tooltips = false;  // true|false: should the name of the track appear on the map when you mouse over the name in the list?
+			  gv_options.tracklist_options.draggable = true;  // true|false: can it be moved around the screen?
+			  gv_options.tracklist_options.collapsible = true;  // true|false: can it be collapsed by double-clicking its top bar?
+			  gv_options.tracklist_options.header = 'Routes:'; // HTML code; be sure to put backslashes in front of any single quotes, and don't include any line breaks
+			  gv_options.tracklist_options.footer = ''; // HTML code
+			gv_options.profile_options = { visible:false, icon:false, units:'metric', filled:true, waypoints:true, height:120, width:'100%', y_min:null, y_max:null, gap_between_tracks:false }; // see https://www.gpsvisualizer.com/tutorials/profiles_in_maps.html
+
+
+			// marker-related options:
+			gv_options.default_marker = { color:'red',icon:'circle',scale:1 }; // icon can be a URL, but be sure to also include size:[w,h] and optionally anchor:[x,y]
+			gv_options.vector_markers = false; // are the icons on the map in embedded SVG format?
+			gv_options.marker_tooltips = true; // do the names of the markers show up when you mouse-over them?
+			gv_options.marker_shadows = true; // true|false: do the standard markers have "shadows" behind them?
+			gv_options.marker_link_target = '_blank'; // the name of the window or frame into which markers' URLs will load
+			gv_options.info_window_width = 0;  // in pixels, the width of the markers' pop-up info "bubbles" (can be overridden by 'window_width' in individual markers)
+			gv_options.thumbnail_width = 0;  // in pixels, the width of the markers' thumbnails (can be overridden by 'thumbnail_width' in individual markers)
+			gv_options.photo_size = [0,0];  // in pixels, the size of the photos in info windows (can be overridden by 'photo_width' or 'photo_size' in individual markers)
+			gv_options.hide_labels = false;  // true|false: hide labels when map first loads?
+			gv_options.labels_behind_markers = false; // true|false: are the labels behind other markers (true) or in front of them (false)?
+			gv_options.label_offset = [0,0];  // [x,y]: shift all markers' labels (positive numbers are right and down)
+			gv_options.label_centered = false;  // true|false: center labels with respect to their markers?  (label_left is also a valid option.)
+			gv_options.driving_directions = false;  // put a small "driving directions" form in each marker's pop-up window? (override with dd:true or dd:false in a marker's options)
+			gv_options.garmin_icon_set = 'gpsmap'; // 'gpsmap' are the small 16x16 icons; change it to '24x24' for larger icons
+			gv_options.marker_list_options = {};  // options for a dynamically-created list of markers
+			  gv_options.marker_list_options.enabled = true;  // true|false: enable or disable the marker list altogether
+			  gv_options.marker_list_options.floating = true;  // is the list a floating box inside the map itself?
+			  gv_options.marker_list_options.position = ['RIGHT_BOTTOM',6,38];  // floating list only: position within map
+			  gv_options.marker_list_options.min_width = 160; // minimum width, in pixels, of the floating list
+			  gv_options.marker_list_options.max_width = 160;  // maximum width
+			  gv_options.marker_list_options.min_height = 0;  // minimum height, in pixels, of the floating list
+			  gv_options.marker_list_options.max_height = 289;  // maximum height
+			  gv_options.marker_list_options.draggable = true;  // true|false, floating list only: can it be moved around the screen?
+			  gv_options.marker_list_options.collapsible = true;  // true|false, floating list only: can it be collapsed by double-clicking its top bar?
+			  gv_options.marker_list_options.include_tickmarks = false;  // true|false: are distance/time tickmarks included in the list?
+			  gv_options.marker_list_options.include_trackpoints = false;  // true|false: are "trackpoint" markers included in the list?
+			  gv_options.marker_list_options.dividers = false;  // true|false: will a thin line be drawn between each item in the list?
+			  gv_options.marker_list_options.desc = false;  // true|false: will the markers' descriptions be shown below their names in the list?
+			  gv_options.marker_list_options.icons = false;  // true|false: should the markers' icons appear to the left of their names in the list?
+			  gv_options.marker_list_options.thumbnails = false;  // true|false: should markers' thumbnails be shown in the list?
+			  gv_options.marker_list_options.folders_collapsed = true;  // true|false: do folders in the list start out in a collapsed state?
+			  gv_options.marker_list_options.folders_hidden = false;  // true|false: do folders in the list start out in a hidden state?
+			  gv_options.marker_list_options.collapsed_folders = []; // an array of folder names
+			  gv_options.marker_list_options.hidden_folders = []; // an array of folder names
+			  gv_options.marker_list_options.count_folder_items = false;  // true|false: list the number of items in each folder?
+			  gv_options.marker_list_options.wrap_names = true;  // true|false: should marker's names be allowed to wrap onto more than one line?
+			  gv_options.marker_list_options.unnamed = '[unnamed]';  // what 'name' should be assigned to  unnamed markers in the list?
+			  gv_options.marker_list_options.colors = false;  // true|false: should the names/descs of the points in the list be colorized the same as their markers?
+			  gv_options.marker_list_options.default_color = '';  // default HTML color code for the names/descs in the list
+			  gv_options.marker_list_options.limit = 0;  // how many markers to show in the list; 0 for no limit
+			  gv_options.marker_list_options.center = true;  // true|false: does the map center upon a marker when you click its name in the list?
+			  gv_options.marker_list_options.zoom = false;  // true|false: does the map zoom to a certain level when you click on a marker's name in the list?
+			  gv_options.marker_list_options.zoom_level = 16;  // if 'zoom' is true, what level should the map zoom to?
+			  gv_options.marker_list_options.info_window = true;  // true|false: do info windows pop up when the markers' names are clicked in the list?
+			  gv_options.marker_list_options.url_links = false;  // true|false: do the names in the list become instant links to the markers' URLs?
+			  gv_options.marker_list_options.toggle = false;  // true|false: does a marker disappear if you click on its name in the list?
+			  gv_options.marker_list_options.help_tooltips = false;  // true|false: do "tooltips" appear on marker names that tell you what happens when you click?
+			  gv_options.marker_list_options.id = 'gv_marker_list';  // id of a DIV tag that holds the list
+			  gv_options.marker_list_options.header = ''; // HTML code; be sure to put backslashes in front of any single quotes, and don't include any line breaks
+			  gv_options.marker_list_options.footer = ''; // HTML code
+			gv_options.marker_filter_options = {};  // options for removing waypoints that are out of the current view
+			  gv_options.marker_filter_options.enabled = false;  // true|false: should out-of-range markers be removed?
+			  gv_options.marker_filter_options.movement_threshold = 8;  // in pixels, how far the map has to move to trigger filtering
+			  gv_options.marker_filter_options.limit = 0;  // maximum number of markers to display on the map; 0 for no limit
+			  gv_options.marker_filter_options.update_list = true;  // true|false: should the marker list be updated with only the filtered markers?
+			  gv_options.marker_filter_options.sort_list_by_distance = false;  // true|false: should the marker list be sorted by distance from the center of the map?
+			  gv_options.marker_filter_options.min_zoom = 0;  // below this zoom level, don't show any markers at all
+			  gv_options.marker_filter_options.zoom_message = '';  // message to put in the marker list if the map is below the min_zoom threshold
+			gv_options.synthesize_fields = {}; // for example: {label:'{name}'} would cause all markers' names to become visible labels
+			gv_options.onload_function = "GV_Windowshade_Collapse('gv_tracklist'); GV_Windowshade_Collapse('gv_marker_list');";	
+
+			
+			// Load GPS Visualizer's mapping functions (this must be loaded AFTER gv_options are set):
+			var script_file = (self.API && API.match(/^g/i)) ? 'google_maps/functions3.js' : 'leaflet/functions.js';
+			if (document.location.protocol == 'https:') { // secure pages require secure scripts
+				document.writeln('<script src="https://www.gpsvisualizer.com/'+script_file+'" type="text/javascript"><'+'/script>');
+			} else {
+				document.writeln('<script src="http://maps.gpsvisualizer.com/'+script_file+'" type="text/javascript"><'+'/script>');
+			}
+		</script>
+		<style type="text/css">
+			/* Put any custom style definitions here (e.g., .gv_marker_info_window, .gv_marker_info_window_name, .gv_marker_list_item, .gv_tooltip, .gv_label, etc.) */
+			#gmap_div .gv_marker_info_window {
+				font-size:11px !important;
+			}
+			#gmap_div .gv_label {
+				opacity:0.90; filter:alpha(opacity=90);
+				color:white; background:#333333; border:1px solid black; padding:1px;
+				font-family:Verdana !important; font-size:10px;
+				font-weight:normal !important;
+			}
+			.legend_block {
+				display:inline-block; border:solid 1px black; width:9px; height:9px; margin:0px 2px 0px 0px;
+			}
+			
+		</style>
+		
+		<!-- end GPSV setup script and styles; begin map-drawing script (they must be separate) -->
+		<script type="text/javascript">
+			function GV_Map() {
+				GV_Setup_Map();
+				
+				// Track #1
+				t = 1; trk[t] = {info:[],segments:[]};
+				trk[t].info.name = '35A/C'; trk[t].info.desc = ''; trk[t].info.clickable = true;
+				trk[t].info.color = '#FB0202'; trk[t].info.width = 3; trk[t].info.opacity = 0.4; trk[t].info.hidden = false; trk[t].info.z_index = null;
+				trk[t].info.outline_color = 'black'; trk[t].info.outline_width = 0; trk[t].info.fill_color = '#FB0202'; trk[t].info.fill_opacity = 0;
+				trk[t].segments.push({ points:[ [50.523542,-3.8194985],[50.512562,-3.8245771],[50.506041,-3.8530253],[50.513508,-3.8698207],[50.524453,-3.8876774],[50.536345,-3.8975085],[50.542172,-3.8876087],[50.543252,-3.875302],[50.541959,-3.8549693],[50.543316,-3.8431667],[50.537137,-3.842573],[50.528585,-3.8334071],[50.523542,-3.8194985] ] });
+				GV_Draw_Track(t);
+				
+				// Track #2
+				t = 2; trk[t] = {info:[],segments:[]};
+				trk[t].info.name = '35B/D'; trk[t].info.desc = ''; trk[t].info.clickable = true;
+				trk[t].info.color = '#43FB02'; trk[t].info.width = 3; trk[t].info.opacity = 0.4; trk[t].info.hidden = false; trk[t].info.z_index = null;
+				trk[t].info.outline_color = 'black'; trk[t].info.outline_width = 0; trk[t].info.fill_color = '#43FB02'; trk[t].info.fill_opacity = 0;
+				trk[t].segments.push({ points:[ [50.523542,-3.8194985],[50.528585,-3.8334071],[50.537137,-3.842573],[50.543316,-3.8431667],[50.541959,-3.8549693],[50.543252,-3.875302],[50.542172,-3.8876087],[50.536345,-3.8975085],[50.524453,-3.8876774],[50.513508,-3.8698207],[50.506041,-3.8530253],[50.512562,-3.8245771],[50.523542,-3.8194985] ] });
+				GV_Draw_Track(t);
+				
+				// Track #3
+				t = 3; trk[t] = {info:[],segments:[]};
+				trk[t].info.name = '45A/C'; trk[t].info.desc = ''; trk[t].info.clickable = true;
+				trk[t].info.color = '#0232FB'; trk[t].info.width = 3; trk[t].info.opacity = 0.4; trk[t].info.hidden = false; trk[t].info.z_index = null;
+				trk[t].info.outline_color = 'black'; trk[t].info.outline_width = 0; trk[t].info.fill_color = '#0232FB'; trk[t].info.fill_opacity = 0;
+				trk[t].segments.push({ points:[ [50.523411,-3.8192113],[50.512691,-3.8249347],[50.515239,-3.8385039],[50.508802,-3.8587043],[50.513693,-3.8694754],[50.524435,-3.8876485],[50.536433,-3.8976109],[50.542187,-3.8877928],[50.550201,-3.8665435],[50.552551,-3.8562604],[50.543361,-3.8431262],[50.53845,-3.8448399],[50.523411,-3.8192113] ] });
+				GV_Draw_Track(t);
+				
+				// Track #4
+				t = 4; trk[t] = {info:[],segments:[]};
+				trk[t].info.name = '45B'; trk[t].info.desc = ''; trk[t].info.clickable = true;
+				trk[t].info.color = '#FB02F7'; trk[t].info.width = 3; trk[t].info.opacity = 0.4; trk[t].info.hidden = false; trk[t].info.z_index = null;
+				trk[t].info.outline_color = 'black'; trk[t].info.outline_width = 0; trk[t].info.fill_color = '#FB02F7'; trk[t].info.fill_opacity = 0;
+				trk[t].segments.push({ points:[ [50.523411,-3.8192113],[50.53845,-3.8448399],[50.543361,-3.8431262],[50.552551,-3.8562604],[50.550201,-3.8665435],[50.542187,-3.8877928],[50.536433,-3.8976109],[50.524435,-3.8876485],[50.513693,-3.8694754],[50.508802,-3.8587043],[50.515239,-3.8385039],[50.512691,-3.8249347],[50.523411,-3.8192113] ] });
+				GV_Draw_Track(t);
+				
+				t = 1; GV_Add_Track_to_Tracklist({bullet:'- ',name:trk[t].info.name,desc:trk[t].info.desc,color:trk[t].info.color,number:t});
+				t = 2; GV_Add_Track_to_Tracklist({bullet:'- ',name:trk[t].info.name,desc:trk[t].info.desc,color:trk[t].info.color,number:t});
+				t = 3; GV_Add_Track_to_Tracklist({bullet:'- ',name:trk[t].info.name,desc:trk[t].info.desc,color:trk[t].info.color,number:t});
+				t = 4; GV_Add_Track_to_Tracklist({bullet:'- ',name:trk[t].info.name,desc:trk[t].info.desc,color:trk[t].info.color,number:t});
+				
+				
+				GV_Draw_Marker({lat:50.5149195,lon:-3.8234867,name:'1 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:196.4,track_number:1});
+				GV_Draw_Marker({lat:50.5103525,lon:-3.8342163,name:'2 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:250.2,track_number:1});
+				GV_Draw_Marker({lat:50.5073115,lon:-3.8474825,name:'3 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:250.2,track_number:1});
+				GV_Draw_Marker({lat:50.5090342,lon:-3.8597579,name:'4 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:305.0,track_number:1});
+				GV_Draw_Marker({lat:50.5143170,lon:-3.8711405,name:'5 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:314.0,track_number:1});
+				GV_Draw_Marker({lat:50.5205472,lon:-3.8813052,name:'6 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:314.0,track_number:1});
+				GV_Draw_Marker({lat:50.5274203,lon:-3.8901305,name:'7 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:332.3,track_number:1});
+				GV_Draw_Marker({lat:50.5353733,lon:-3.8967052,name:'8 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:332.3,track_number:1});
+				GV_Draw_Marker({lat:50.5416992,lon:-3.8884120,name:'9 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:47.2,track_number:1});
+				GV_Draw_Marker({lat:50.5432146,lon:-3.8747141,name:'10 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:95.7,track_number:1});
+				GV_Draw_Marker({lat:50.5423219,lon:-3.8606765,name:'11 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:95.7,track_number:1});
+				GV_Draw_Marker({lat:50.5429062,lon:-3.8467307,name:'12 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:79.7,track_number:1});
+				GV_Draw_Marker({lat:50.5367313,lon:-3.8421382,name:'13 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:145.7,track_number:1});
+				GV_Draw_Marker({lat:50.5293083,lon:-3.8341824,name:'14 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:145.7,track_number:1});
+				GV_Draw_Marker({lat:50.5245735,lon:-3.8223435,name:'15 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:119.7,track_number:1});
+				GV_Draw_Marker({lat:50.5235420,lon:-3.8194985,name:'15.23 km',desc:trk[1].info.name,color:trk[1].info.color,icon:'tickmark',type:'tickmark',folder:'35A [tickmarks]',rotation:119.7,track_number:1});
+				GV_Draw_Marker({lat:50.5279866,lon:-3.8317566,name:'1 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:299.7,track_number:2});
+				GV_Draw_Marker({lat:50.5350085,lon:-3.8402917,name:'2 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:325.7,track_number:2});
+				GV_Draw_Marker({lat:50.5432767,lon:-3.8435085,name:'3 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:259.7,track_number:2});
+				GV_Draw_Marker({lat:50.5421148,lon:-3.8574186,name:'4 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:275.7,track_number:2});
+				GV_Draw_Marker({lat:50.5430074,lon:-3.8714561,name:'5 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:275.7,track_number:2});
+				GV_Draw_Marker({lat:50.5423616,lon:-3.8854485,name:'6 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:262.1,track_number:2});
+				GV_Draw_Marker({lat:50.5370154,lon:-3.8963695,name:'7 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:227.2,track_number:2});
+				GV_Draw_Marker({lat:50.5292661,lon:-3.8916564,name:'8 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:152.3,track_number:2});
+				GV_Draw_Marker({lat:50.5219932,lon:-3.8836643,name:'9 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:133.9,track_number:2});
+				GV_Draw_Marker({lat:50.5157630,lon:-3.8734996,name:'10 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:133.9,track_number:2});
+				GV_Draw_Marker({lat:50.5102275,lon:-3.8624419,name:'11 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:125.0,track_number:2});
+				GV_Draw_Marker({lat:50.5066058,lon:-3.8505615,name:'12 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:70.2,track_number:2});
+				GV_Draw_Marker({lat:50.5096467,lon:-3.8372953,name:'13 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:70.2,track_number:2});
+				GV_Draw_Marker({lat:50.5129182,lon:-3.8244123,name:'14 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:16.4,track_number:2});
+				GV_Draw_Marker({lat:50.5215408,lon:-3.8204241,name:'15 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:16.4,track_number:2});
+				GV_Draw_Marker({lat:50.5235420,lon:-3.8194985,name:'15.23 km',desc:trk[2].info.name,color:trk[2].info.color,icon:'tickmark',type:'tickmark',folder:'35B [tickmarks]',rotation:16.4,track_number:2});
+				GV_Draw_Marker({lat:50.5149009,lon:-3.8237548,name:'1 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:198.8,track_number:3});
+				GV_Draw_Marker({lat:50.5145711,lon:-3.8349472,name:'2 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:286.5,track_number:3});
+				GV_Draw_Marker({lat:50.5122772,lon:-3.8477984,name:'3 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:243.4,track_number:3});
+				GV_Draw_Marker({lat:50.5095071,lon:-3.8602571,name:'4 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:305.5,track_number:3});
+				GV_Draw_Marker({lat:50.5148987,lon:-3.8715152,name:'5 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:312.9,track_number:3});
+				GV_Draw_Marker({lat:50.5210106,lon:-3.8818551,name:'6 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:312.9,track_number:3});
+				GV_Draw_Marker({lat:50.5279287,lon:-3.8905495,name:'7 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:332.2,track_number:3});
+				GV_Draw_Marker({lat:50.5358742,lon:-3.8971469,name:'8 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:332.2,track_number:3});
+				GV_Draw_Marker({lat:50.5420902,lon:-3.8879581,name:'9 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:47.3,track_number:3});
+				GV_Draw_Marker({lat:50.5466930,lon:-3.8758450,name:'10 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:59.3,track_number:3});
+				GV_Draw_Marker({lat:50.5509109,lon:-3.8634373,name:'11 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:70.2,track_number:3});
+				GV_Draw_Marker({lat:50.5494960,lon:-3.8518943,name:'12 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:137.8,track_number:3});
+				GV_Draw_Marker({lat:50.5426855,lon:-3.8433619,name:'13 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:192.5,track_number:3});
+				GV_Draw_Marker({lat:50.5353000,lon:-3.8394719,name:'14 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:132.7,track_number:3});
+				GV_Draw_Marker({lat:50.5292113,lon:-3.8290958,name:'15 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:132.7,track_number:3});
+				GV_Draw_Marker({lat:50.5234110,lon:-3.8192113,name:'15.95 km',desc:trk[3].info.name,color:trk[3].info.color,icon:'tickmark',type:'tickmark',folder:'45A [tickmarks]',rotation:132.7,track_number:3});
+				GV_Draw_Marker({lat:50.5294998,lon:-3.8295874,name:'1 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:312.7,track_number:4});
+				GV_Draw_Marker({lat:50.5355885,lon:-3.8399635,name:'2 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:312.7,track_number:4});
+				GV_Draw_Marker({lat:50.5431012,lon:-3.8432168,name:'3 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:12.5,track_number:4});
+				GV_Draw_Marker({lat:50.5498109,lon:-3.8523444,name:'4 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:317.8,track_number:4});
+				GV_Draw_Marker({lat:50.5507671,lon:-3.8640666,name:'5 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:250.2,track_number:4});
+				GV_Draw_Marker({lat:50.5464761,lon:-3.8764203,name:'6 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:239.3,track_number:4});
+				GV_Draw_Marker({lat:50.5418018,lon:-3.8884500,name:'7 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:227.3,track_number:4});
+				GV_Draw_Marker({lat:50.5354977,lon:-3.8968343,name:'8 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:152.2,track_number:4});
+				GV_Draw_Marker({lat:50.5275523,lon:-3.8902369,name:'9 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:152.2,track_number:4});
+				GV_Draw_Marker({lat:50.5207210,lon:-3.8813652,name:'10 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:132.9,track_number:4});
+				GV_Draw_Marker({lat:50.5146091,lon:-3.8710253,name:'11 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:132.9,track_number:4});
+				GV_Draw_Marker({lat:50.5092600,lon:-3.8597130,name:'12 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:125.5,track_number:4});
+				GV_Draw_Marker({lat:50.5124676,lon:-3.8472009,name:'13 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:63.4,track_number:4});
+				GV_Draw_Marker({lat:50.5144508,lon:-3.8343064,name:'14 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:106.4,track_number:4});
+				GV_Draw_Marker({lat:50.5153041,lon:-3.8235396,name:'15 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:18.7,track_number:4});
+				GV_Draw_Marker({lat:50.5234110,lon:-3.8192113,name:'15.95 km',desc:trk[4].info.name,color:trk[4].info.color,icon:'tickmark',type:'tickmark',folder:'45B [tickmarks]',rotation:18.7,track_number:4});
+				GV_Draw_Marker({lat:50.5235420,lon:-3.8194985,name:'New Bridge CP',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5125620,lon:-3.8245771,name:'Butts',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5060410,lon:-3.8530253,name:'Gibby Combe Gate',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5135080,lon:-3.8698207,name:'Disused Mine',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5244530,lon:-3.8876774,name:'Horse Ford',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5363450,lon:-3.8975085,name:'Moor Gate',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5421720,lon:-3.8876087,name:'Huccaby Farm',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5432520,lon:-3.8753020,name:'Dartmeet',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5419590,lon:-3.8549693,name:'Sharp Tor',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5433160,lon:-3.8431667,name:'Bel Tor Corner CP',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5371370,lon:-3.8425730,name:'Mel Tor',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5285850,lon:-3.8334071,name:'Aish Tor Path',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5152390,lon:-3.8385039,name:'Disused Quarry',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5088020,lon:-3.8587043,name:'Sandy Way Track',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5502010,lon:-3.8665435,name:'Yar Tor',desc:'',color:'',icon:''});
+				GV_Draw_Marker({lat:50.5525510,lon:-3.8562604,name:'Corndon Tor Cairns',desc:'',color:'',icon:''});
+				
+				gv_options.dynamic_data = [
+					{
+					url:'https://share.garmin.com/Feed/Share/9ZU7V', root_tag:'', marker_tag:'', track_point_tag:'',  reload_on_move:false,
+					field_alias:{}, // e.g.: field_alias:{name:'id',desc:'comment',folder:'category'}
+					synthesize_fields:{ // you can include YOUR document's field names in {curly brackets}; this is like field_alias, but more powerful
+						name:'{Map Display Name}',
+						desc:'{time},{Latitude},{Longitude},{Elevation}',
+						label:'{text}',
+						folder:''
+					},
+					ignore_styles:false,
+					track_options:{color:'#e60000',width:'3',opacity:'0.9'},
+					autozoom:true, zoom_default:8, zoom_adjustment:0 // e.g., to zoom out one step, set zoom_adjustment to -1
+					}
+				];
+				
+				
+				GV_Finish_Map();
+					
+			}
+			GV_Map(); // execute the above code
+			// https://www.gpsvisualizer.com/map_input?bg_map=google_openstreetmap_komoot&center_point=%2B50.526%20-3.851&form=leaflet&geolocation_control=1&google_filter_map_types=1&google_wpt_sym=circle&google_zoom_level=13&trk_list=name&trk_opacity=40&units=metric&tickmark_interval=1km
+		</script>
+		
+		
+		
+	</body>
+
+</html>
