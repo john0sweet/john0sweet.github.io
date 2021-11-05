@@ -1,0 +1,194 @@
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Style id="style_emergency">
+    <IconStyle>
+      <color xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt; $[Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt; $[Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Map Display Name&lt;/td&gt;&lt;td&gt; $[Map Display Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Type&lt;/td&gt;&lt;td&gt; $[Device Type] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IMEI&lt;/td&gt;&lt;td&gt; $[IMEI] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Incident Id&lt;/td&gt;&lt;td&gt; $[Incident Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt; $[Elevation] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Velocity&lt;/td&gt;&lt;td&gt; $[Velocity] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Course&lt;/td&gt;&lt;td&gt; $[Course] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valid GPS Fix&lt;/td&gt;&lt;td&gt; $[Valid GPS Fix] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;In Emergency&lt;/td&gt;&lt;td&gt; $[In Emergency] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Event&lt;/td&gt;&lt;td&gt; $[Event] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Identifier&lt;/td&gt;&lt;td&gt; $[Device Identifier] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SpatialRefSystem&lt;/td&gt;&lt;td&gt; $[SpatialRefSystem] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="style_1229530">
+    <IconStyle>
+      <color>ff779e1b</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt; $[Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt; $[Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Map Display Name&lt;/td&gt;&lt;td&gt; $[Map Display Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Type&lt;/td&gt;&lt;td&gt; $[Device Type] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IMEI&lt;/td&gt;&lt;td&gt; $[IMEI] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Incident Id&lt;/td&gt;&lt;td&gt; $[Incident Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt; $[Elevation] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Velocity&lt;/td&gt;&lt;td&gt; $[Velocity] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Course&lt;/td&gt;&lt;td&gt; $[Course] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valid GPS Fix&lt;/td&gt;&lt;td&gt; $[Valid GPS Fix] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;In Emergency&lt;/td&gt;&lt;td&gt; $[In Emergency] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Event&lt;/td&gt;&lt;td&gt; $[Event] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Identifier&lt;/td&gt;&lt;td&gt; $[Device Identifier] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SpatialRefSystem&lt;/td&gt;&lt;td&gt; $[SpatialRefSystem] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="waypointstyle_1229530">
+    <IconStyle>
+      <color>ff779e1b</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="linestyle_1229530">
+    <IconStyle>
+      <color>ff779e1b</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text></text>
+    </BalloonStyle>
+  </Style>
+  <Style id="style_1229540">
+    <IconStyle>
+      <color>ff02aada</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt; $[Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt; $[Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Map Display Name&lt;/td&gt;&lt;td&gt; $[Map Display Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Type&lt;/td&gt;&lt;td&gt; $[Device Type] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IMEI&lt;/td&gt;&lt;td&gt; $[IMEI] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Incident Id&lt;/td&gt;&lt;td&gt; $[Incident Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt; $[Elevation] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Velocity&lt;/td&gt;&lt;td&gt; $[Velocity] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Course&lt;/td&gt;&lt;td&gt; $[Course] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valid GPS Fix&lt;/td&gt;&lt;td&gt; $[Valid GPS Fix] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;In Emergency&lt;/td&gt;&lt;td&gt; $[In Emergency] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Event&lt;/td&gt;&lt;td&gt; $[Event] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Identifier&lt;/td&gt;&lt;td&gt; $[Device Identifier] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SpatialRefSystem&lt;/td&gt;&lt;td&gt; $[SpatialRefSystem] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="waypointstyle_1229540">
+    <IconStyle>
+      <color>ff02aada</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="linestyle_1229540">
+    <IconStyle>
+      <color>ff02aada</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text></text>
+    </BalloonStyle>
+  </Style>
+  <Style id="style_1229538">
+    <IconStyle>
+      <color>ffff00c0</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt; $[Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt; $[Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Map Display Name&lt;/td&gt;&lt;td&gt; $[Map Display Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Type&lt;/td&gt;&lt;td&gt; $[Device Type] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IMEI&lt;/td&gt;&lt;td&gt; $[IMEI] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Incident Id&lt;/td&gt;&lt;td&gt; $[Incident Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt; $[Elevation] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Velocity&lt;/td&gt;&lt;td&gt; $[Velocity] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Course&lt;/td&gt;&lt;td&gt; $[Course] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valid GPS Fix&lt;/td&gt;&lt;td&gt; $[Valid GPS Fix] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;In Emergency&lt;/td&gt;&lt;td&gt; $[In Emergency] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Event&lt;/td&gt;&lt;td&gt; $[Event] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Identifier&lt;/td&gt;&lt;td&gt; $[Device Identifier] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SpatialRefSystem&lt;/td&gt;&lt;td&gt; $[SpatialRefSystem] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="waypointstyle_1229538">
+    <IconStyle>
+      <color>ffff00c0</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="linestyle_1229538">
+    <IconStyle>
+      <color>ffff00c0</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text></text>
+    </BalloonStyle>
+  </Style>
+  <Style id="style_1229533">
+    <IconStyle>
+      <color>ff006cff</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Id&lt;/td&gt;&lt;td&gt; $[Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt; $[Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Map Display Name&lt;/td&gt;&lt;td&gt; $[Map Display Name] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Type&lt;/td&gt;&lt;td&gt; $[Device Type] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IMEI&lt;/td&gt;&lt;td&gt; $[IMEI] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Incident Id&lt;/td&gt;&lt;td&gt; $[Incident Id] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt; $[Elevation] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Velocity&lt;/td&gt;&lt;td&gt; $[Velocity] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Course&lt;/td&gt;&lt;td&gt; $[Course] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Valid GPS Fix&lt;/td&gt;&lt;td&gt; $[Valid GPS Fix] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;In Emergency&lt;/td&gt;&lt;td&gt; $[In Emergency] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Event&lt;/td&gt;&lt;td&gt; $[Event] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device Identifier&lt;/td&gt;&lt;td&gt; $[Device Identifier] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SpatialRefSystem&lt;/td&gt;&lt;td&gt; $[SpatialRefSystem] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="waypointstyle_1229533">
+    <IconStyle>
+      <color>ff006cff</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt; $[Time] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Time UTC&lt;/td&gt;&lt;td&gt; $[Time UTC] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt; $[Latitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt; $[Longitude] &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Text&lt;/td&gt;&lt;td&gt; $[Text] &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</text>
+    </BalloonStyle>
+  </Style>
+  <Style id="linestyle_1229533">
+    <IconStyle>
+      <color>ff006cff</color>
+      <colorMode>normal</colorMode>
+      <Icon>
+        <href></href>
+      </Icon>
+    </IconStyle>
+    <BalloonStyle>
+      <text></text>
+    </BalloonStyle>
+  </Style>
+  <Placemark>
+    <name>35A</name>
+    <visibility>true</visibility>
+    <description>Not yet started walking - default message</description>
+    <Point>
+      <coordinates>-3.8245771,50.5125620,0</coordinates>
+    </Point>
+    <styleUrl>#style_1229530</styleUrl>
+  </Placemark>
+  <Placemark>
+    <name>45B</name>
+    <visibility>true</visibility>
+    <description>Not yet started walking - default message</description>
+    <Point>
+      <coordinates>-3.8245771,50.5115620,0</coordinates>
+    </Point>
+    <styleUrl>#style_1229540</styleUrl>
+  </Placemark>
+  <Placemark>
+    <name>45A</name>
+    <visibility>true</visibility>
+    <description>Not yet started walking - default message</description>
+    <Point>
+      <coordinates>-3.8245771,50.5105620,0</coordinates>
+    </Point>
+    <styleUrl>#style_1229538</styleUrl>
+  </Placemark>
+  <Placemark>
+    <name>35B</name>
+    <visibility>true</visibility>
+    <description>Not yet started walking - default message</description>
+    <Point>
+      <coordinates>-3.8245771,50.5135620,0</coordinates>
+    </Point>
+    <styleUrl>#style_1229533</styleUrl>
+  </Placemark>
+</kml>
