@@ -1,7 +1,6 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
   <Style id="style_emergency">
     <IconStyle>
-      <color xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
       <colorMode>normal</colorMode>
       <Icon>
         <href>https://developers.google.com/maps/documentation/javascript/examples/full/images/library_maps.png</href>
@@ -167,9 +166,9 @@
   <Placemark>
     <name>45B</name>
     <visibility>true</visibility>
-    <description>Not yet started walking - default message</description>
+    <description>We're all well 10/28/2021 12:39:00 PM</description>
     <Point>
-      <coordinates>-3.8245771,50.5115620,0</coordinates>
+      <coordinates>-3.103401,51.014306,0</coordinates>
     </Point>
     <styleUrl>#style_1229540</styleUrl>
   </Placemark>
