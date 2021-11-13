@@ -157,36 +157,36 @@
   <Placemark>
     <name>35A</name>
     <visibility>true</visibility>
-    <description>Not yet started walking - default message</description>
+    <description>test 35a text 11/7/2021 3:41:30 PM</description>
     <Point>
-      <coordinates>-3.8245771,50.5125620,0</coordinates>
+      <coordinates>-3.827361,50.523611,0</coordinates>
     </Point>
     <styleUrl>#style_1229530</styleUrl>
   </Placemark>
   <Placemark>
     <name>45B</name>
     <visibility>true</visibility>
-    <description>Test 1 10/28/2021 12:39:00 PM</description>
+    <description>test 45b text 11/7/2021 3:37:45 PM</description>
     <Point>
-      <coordinates>-3.103401,51.014306,0</coordinates>
+      <coordinates>-3.819916,50.523345,0</coordinates>
     </Point>
     <styleUrl>#style_1229540</styleUrl>
   </Placemark>
   <Placemark>
     <name>45A</name>
     <visibility>true</visibility>
-    <description>We're all well 11/6/2021 8:02:00 AM</description>
+    <description>Test 45A Text 11/7/2021 4:08:00 PM</description>
     <Point>
-      <coordinates>-3.546331,50.646156,0</coordinates>
+      <coordinates>-3.819808,50.523323,0</coordinates>
     </Point>
     <styleUrl>#style_1229538</styleUrl>
   </Placemark>
   <Placemark>
     <name>35B</name>
     <visibility>true</visibility>
-    <description>Not yet started walking - default message</description>
+    <description>test 35b text 11/7/2021 3:55:45 PM</description>
     <Point>
-      <coordinates>-3.8245771,50.5135620,0</coordinates>
+      <coordinates>-3.822190,50.515833,0</coordinates>
     </Point>
     <styleUrl>#style_1229533</styleUrl>
   </Placemark>
