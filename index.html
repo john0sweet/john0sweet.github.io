@@ -7,7 +7,6 @@
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
 		<meta name="geo.position" content="50.529296; -3.8584111" />
 		<meta name="ICBM" content="50.529296, -3.8584111" />
-		<meta http-equiv="refresh" content="180">
 	</head>
 	<body style="margin:0px;">
 		
@@ -373,6 +372,7 @@
 				
 				
 				GV_Finish_Map();
+				setInterval(GV_Reload_Markers_From_All_Files,60000)
 					
 			}
 			GV_Map(); // execute the above code
