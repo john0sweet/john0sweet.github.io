@@ -343,6 +343,19 @@
 				
 				gv_options.dynamic_data = [
 					{
+					url:'https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/Carpark.kml', root_tag:'', marker_tag:'', track_point_tag:'',  reload_on_move:false,
+					field_alias:{}, // e.g.: field_alias:{name:'id',desc:'comment',folder:'category'}
+					synthesize_fields:{ // you can include YOUR document's field names in {curly brackets}; this is like field_alias, but more powerful
+						name:'',
+						desc:'',
+						label:'',
+						folder:''
+					},
+					ignore_styles:false,
+					track_options:{color:'#e60000',width:'3',opacity:'0.9'},
+					autozoom:true, zoom_default:8, zoom_adjustment:0 // e.g., to zoom out one step, set zoom_adjustment to -1
+					},
+					{
 					url:'https://share.garmin.com/Feed/Share/9ZU7V', root_tag:'', marker_tag:'', track_point_tag:'',  reload_on_move:false,
 					field_alias:{}, // e.g.: field_alias:{name:'id',desc:'comment',folder:'category'}
 					synthesize_fields:{ // you can include YOUR document's field names in {curly brackets}; this is like field_alias, but more powerful
@@ -372,7 +385,7 @@
 				
 				
 				GV_Finish_Map();
-				setInterval(GV_Reload_Markers_From_All_Files,15000)
+				setInterval(GV_Reload_Markers_From_All_Files,60000) //refreshes markers every 60s. Starts at the top of the live list and works down, so first marker is wiped if no signal present
 					
 			}
 			GV_Map(); // execute the above code
