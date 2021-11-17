@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
 	<head>
-		<title>Maynard Ten Tors Tracker 6-7 Nov 21</title>
+		<title>Maynard Ten Tors Tracker</title>
 		<base target="_top"></base>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
@@ -37,7 +37,7 @@
 		-->
 		<div style="margin-left:0px; margin-right:0px; margin-top:0px; margin-bottom:0px;">
 			<div id="gmap_div" style="width:700px; height:659px; margin:0px; margin-right:12px; background-color:#f0f0f0; float:left; overflow:hidden;">
-				<p style="text-align:center; font:10px Arial;">Maynard Ten Tors Tracker 6-7 Nov 21 - Created using gpsvisualizer.com<br /><br />Please wait while the map data loads...</p>
+				<p style="text-align:center; font:10px Arial;">Maynard Ten Tors Tracker - Created using gpsvisualizer.com<br /><br />Please wait while the map data loads...</p>
 			</div>
 				
 			<div id="gv_infobox" class="gv_infobox" style="font:11px Arial; border:solid #666666 1px; background-color:#ffffff; padding:4px; overflow:auto; display:none; max-width:400px;">
@@ -277,7 +277,7 @@
 				
 				
 				GV_Finish_Map();
-				setInterval(GV_Reload_Markers_From_All_Files,60000)	
+				setInterval(GV_Reload_Markers_From_All_Files,60000)	// reloads map markers every 60s, starting with the first file. If no connection, first file disappears leaving remainder.
 			}
 			GV_Map(); // execute the above code
 			
