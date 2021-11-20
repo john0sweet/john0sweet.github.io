@@ -175,7 +175,7 @@
   <Placemark>
     <name>45A</name>
     <visibility>true</visibility>
-    <description>45A Docker Test 11/7/2021 4:08:00 PM</description>
+    <description>laptop off test 11/7/2021 4:08:00 PM</description>
     <Point>
       <coordinates>-3.819808,50.523323,0</coordinates>
     </Point>
@@ -184,7 +184,7 @@
   <Placemark>
     <name>35B</name>
     <visibility>true</visibility>
-    <description>35B Docker Test 11/7/2021 3:55:45 PM</description>
+    <description>laptop off test 11/7/2021 3:55:45 PM</description>
     <Point>
       <coordinates>-3.822190,50.515833,0</coordinates>
     </Point>
