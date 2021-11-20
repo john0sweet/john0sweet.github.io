@@ -157,7 +157,7 @@
   <Placemark>
     <name>35A</name>
     <visibility>true</visibility>
-    <description>test 35a text 11/7/2021 3:41:30 PM</description>
+    <description>35A cloud test 11/7/2021 3:41:30 PM</description>
     <Point>
       <coordinates>-3.827361,50.523611,0</coordinates>
     </Point>
@@ -166,7 +166,7 @@
   <Placemark>
     <name>45B</name>
     <visibility>true</visibility>
-    <description>test 45b text 11/7/2021 3:37:45 PM</description>
+    <description>45B Cloud test 11/7/2021 3:37:45 PM</description>
     <Point>
       <coordinates>-3.819916,50.523345,0</coordinates>
     </Point>
