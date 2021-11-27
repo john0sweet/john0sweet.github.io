@@ -157,9 +157,9 @@
   <Placemark>
     <name>35A</name>
     <visibility>true</visibility>
-    <description>We're all well 11/21/2021 1:38:00 PM</description>
+    <description>We're all well 11/27/2021 9:51:00 AM</description>
     <Point>
-      <coordinates>-3.293151,50.898488,0</coordinates>
+      <coordinates>-3.877465,50.544126,0</coordinates>
     </Point>
     <styleUrl>#style_1229530</styleUrl>
   </Placemark>
@@ -175,18 +175,18 @@
   <Placemark>
     <name>45A</name>
     <visibility>true</visibility>
-    <description>laptop off test 11/7/2021 4:08:00 PM</description>
+    <description>We're all well 11/27/2021 9:51:00 AM</description>
     <Point>
-      <coordinates>-3.819808,50.523323,0</coordinates>
+      <coordinates>-3.877445,50.544105,0</coordinates>
     </Point>
     <styleUrl>#style_1229538</styleUrl>
   </Placemark>
   <Placemark>
     <name>35B</name>
     <visibility>true</visibility>
-    <description>We're all well 11/7/2021 4:11:00 PM</description>
+    <description>We're all well 11/27/2021 9:52:00 AM</description>
     <Point>
-      <coordinates>-3.819873,50.523311,0</coordinates>
+      <coordinates>-3.877143,50.543955,0</coordinates>
     </Point>
     <styleUrl>#style_1229533</styleUrl>
   </Placemark>
