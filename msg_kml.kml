@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="12">
+    <Document id="1">
         <open>1</open>
-        <Folder id="13">
-            <Style id="16">
-                <IconStyle id="17">
+        <Folder id="2">
+            <Style id="5">
+                <IconStyle id="6">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="18">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_red.png</href>
+                    <Icon id="7">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_purple.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="15">
-                <name>unknown</name>
-                <description>This is a test message sent through explore.garmin.com with fake data. 07-Jan-2022 @ 16:39:17</description>
-                <styleUrl>#16</styleUrl>
-                <Point id="14">
-                    <coordinates>-2.0,52.0,30.0</coordinates>
+            <Placemark id="4">
+                <name>35B</name>
+                <description>We're all well 29-Dec-2021 @ 14:51:00</description>
+                <styleUrl>#5</styleUrl>
+                <Point id="3">
+                    <coordinates>-3.293602466583252,50.89797377586365,118.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
