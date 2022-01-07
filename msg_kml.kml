@@ -9,17 +9,17 @@
                     <scale>0.2</scale>
                     <heading>0</heading>
                     <Icon id="7">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_purple.png</href>
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_red.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
             <Placemark id="4">
-                <name>35B</name>
-                <description>We're all well 29-Dec-2021 @ 14:51:00</description>
+                <name>unknown</name>
+                <description>This is a test message sent through explore.garmin.com with fake data. 07-Jan-2022 @ 16:38:42</description>
                 <styleUrl>#5</styleUrl>
                 <Point id="3">
-                    <coordinates>-3.293602466583252,50.89797377586365,118.0</coordinates>
+                    <coordinates>-2.0,52.0,30.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
