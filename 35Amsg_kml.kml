@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1050">
+    <Document id="1875">
         <open>1</open>
-        <Folder id="1051">
-            <Style id="1054">
-                <IconStyle id="1055">
+        <Folder id="1876">
+            <Style id="1879">
+                <IconStyle id="1880">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1056">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_yellow.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="1059">
-                <IconStyle id="1060">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="1061">
+                    <Icon id="1881">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_blue.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="1053">
-                <name>45A</name>
-                <description>We're all well 08-Jan-2022 @ 14:02:00</description>
-                <styleUrl>#1054</styleUrl>
-                <Point id="1052">
-                    <coordinates>-4.06369686126709,50.68970561027527,437.0</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="1058">
+            <Placemark id="1878">
                 <name>35A</name>
-                <description>We're all well 08-Jan-2022 @ 13:48:00</description>
-                <styleUrl>#1059</styleUrl>
-                <Point id="1057">
-                    <coordinates>-4.038698673248291,50.70738673210144,280.0</coordinates>
+                <description>We're all well 08-Jan-2022 @ 12:46:00</description>
+                <styleUrl>#1879</styleUrl>
+                <Point id="1877">
+                    <coordinates>-4.001812934875488,50.71568012237549,362.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
