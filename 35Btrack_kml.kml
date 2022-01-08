@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1387">
+    <Document id="1862">
         <open>1</open>
-        <Folder id="1388">
-            <Style id="1391">
-                <IconStyle id="1392">
+        <Folder id="1863">
+            <Style id="1866">
+                <IconStyle id="1867">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1393">
+                    <Icon id="1868">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="1871">
+                <IconStyle id="1872">
+                    <colorMode>normal</colorMode>
+                    <scale>0.2</scale>
+                    <heading>0</heading>
+                    <Icon id="1873">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="1390">
+            <Placemark id="1865">
+                <name>45B</name>
+                <description> 08-Jan-2022 @ 12:37:45</description>
+                <styleUrl>#1866</styleUrl>
+                <Point id="1864">
+                    <coordinates>-3.9956116676330566,50.65964341163635,525.107361</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="1870">
                 <name>35B</name>
-                <description> 08-Jan-2022 @ 09:08:30</description>
-                <styleUrl>#1391</styleUrl>
-                <Point id="1389">
-                    <coordinates>-4.035136699676514,50.7104766368866,222.88884</coordinates>
+                <description> 08-Jan-2022 @ 12:42:54</description>
+                <styleUrl>#1871</styleUrl>
+                <Point id="1869">
+                    <coordinates>0.0,0.0,-422.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
