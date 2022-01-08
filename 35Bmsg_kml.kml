@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="169">
+    <Document id="651">
         <open>1</open>
-        <Folder id="170">
-            <Style id="173">
-                <IconStyle id="174">
+        <Folder id="652">
+            <Style id="655">
+                <IconStyle id="656">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="175">
+                    <Icon id="657">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_green.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="660">
+                <IconStyle id="661">
+                    <colorMode>normal</colorMode>
+                    <scale>0.2</scale>
+                    <heading>0</heading>
+                    <Icon id="662">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_blue.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="665">
+                <IconStyle id="666">
+                    <colorMode>normal</colorMode>
+                    <scale>0.2</scale>
+                    <heading>0</heading>
+                    <Icon id="667">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_purple.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="172">
+            <Placemark id="654">
+                <name>45B</name>
+                <description>We're all well 08-Jan-2022 @ 09:09:00</description>
+                <styleUrl>#655</styleUrl>
+                <Point id="653">
+                    <coordinates>-4.059298038482666,50.68898677825928,425.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="659">
+                <name>35A</name>
+                <description>We're all well 08-Jan-2022 @ 09:36:00</description>
+                <styleUrl>#660</styleUrl>
+                <Point id="658">
+                    <coordinates>-4.044685363769531,50.69465160369873,286.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="664">
                 <name>35B</name>
-                <description>We're all well 07-Jan-2022 @ 21:14:00</description>
-                <styleUrl>#173</styleUrl>
-                <Point id="171">
-                    <coordinates>-3.2934093475341797,50.89786648750305,135.0</coordinates>
+                <description>We're all well 08-Jan-2022 @ 10:01:00</description>
+                <styleUrl>#665</styleUrl>
+                <Point id="663">
+                    <coordinates>-4.003207683563232,50.715283155441284,371.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
