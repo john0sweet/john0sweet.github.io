@@ -1,79 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1449">
+    <Document id="1588">
         <open>1</open>
-        <Folder id="1450">
-            <Style id="1453">
-                <IconStyle id="1454">
+        <Folder id="1589">
+            <Style id="1592">
+                <IconStyle id="1593">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1455">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="1458">
-                <IconStyle id="1459">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="1460">
+                    <Icon id="1594">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
-            <Style id="1463">
-                <IconStyle id="1464">
+            <Style id="1597">
+                <IconStyle id="1598">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1465">
+                    <Icon id="1599">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
-            <Style id="1468">
-                <IconStyle id="1469">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="1470">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_blue.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
             <name>inReach</name>
-            <Placemark id="1452">
-                <name>35B</name>
-                <description> 08-Jan-2022 @ 09:08:30</description>
-                <styleUrl>#1453</styleUrl>
-                <Point id="1451">
-                    <coordinates>-4.035136699676514,50.7104766368866,222.88884</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="1457">
+            <Placemark id="1591">
                 <name>45A</name>
-                <description> 08-Jan-2022 @ 09:17:15</description>
-                <styleUrl>#1458</styleUrl>
-                <Point id="1456">
-                    <coordinates>-4.003121852874756,50.71282625198364,369.8541</coordinates>
+                <description> 08-Jan-2022 @ 10:17:15</description>
+                <styleUrl>#1592</styleUrl>
+                <Point id="1590">
+                    <coordinates>-3.9872217178344727,50.688064098358154,480.8127</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="1462">
+            <Placemark id="1596">
                 <name>45B</name>
-                <description> 08-Jan-2022 @ 09:27:30</description>
-                <styleUrl>#1463</styleUrl>
-                <Point id="1461">
-                    <coordinates>-4.059770107269287,50.67950248718262,457.6877</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="1467">
-                <name>35A</name>
-                <description> 08-Jan-2022 @ 09:22:00</description>
-                <styleUrl>#1468</styleUrl>
-                <Point id="1466">
-                    <coordinates>-4.048590660095215,50.69173336029053,353.203217</coordinates>
+                <description> 08-Jan-2022 @ 10:17:30</description>
+                <styleUrl>#1597</styleUrl>
+                <Point id="1595">
+                    <coordinates>-4.041895866394043,50.66985726356506,550.507751</coordinates>
                 </Point>
             </Placemark>
         </Folder>
