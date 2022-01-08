@@ -1,79 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="578">
+    <Document id="630">
         <open>1</open>
-        <Folder id="579">
-            <Style id="582">
-                <IconStyle id="583">
+        <Folder id="631">
+            <Style id="634">
+                <IconStyle id="635">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="584">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_blue.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="587">
-                <IconStyle id="588">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="589">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="592">
-                <IconStyle id="593">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="594">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="597">
-                <IconStyle id="598">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="599">
+                    <Icon id="636">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="581">
-                <name>35A</name>
-                <description> 08-Jan-2022 @ 09:02:00</description>
-                <styleUrl>#582</styleUrl>
-                <Point id="580">
-                    <coordinates>-4.058868885040283,50.68999528884888,422.049622</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="586">
-                <name>45A</name>
-                <description> 08-Jan-2022 @ 09:07:15</description>
-                <styleUrl>#587</styleUrl>
-                <Point id="585">
-                    <coordinates>-4.001898765563965,50.71570158004761,363.607147</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="591">
-                <name>35B</name>
-                <description> 08-Jan-2022 @ 08:48:30</description>
-                <styleUrl>#592</styleUrl>
-                <Point id="590">
-                    <coordinates>-4.045672416687012,50.70464015007019,338.653625</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="596">
+            <Placemark id="633">
                 <name>45B</name>
-                <description> 08-Jan-2022 @ 09:07:30</description>
-                <styleUrl>#597</styleUrl>
-                <Point id="595">
-                    <coordinates>-4.058976173400879,50.68967342376709,426.2361</coordinates>
+                <description> 08-Jan-2022 @ 09:47:30</description>
+                <styleUrl>#634</styleUrl>
+                <Point id="632">
+                    <coordinates>-4.055006504058838,50.6749427318573,482.917572</coordinates>
                 </Point>
             </Placemark>
         </Folder>
