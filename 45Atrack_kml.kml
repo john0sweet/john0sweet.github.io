@@ -1,79 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1988">
+    <Document id="2058">
         <open>1</open>
-        <Folder id="1989">
-            <Style id="1992">
-                <IconStyle id="1993">
+        <Folder id="2059">
+            <Style id="2062">
+                <IconStyle id="2063">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1994">
+                    <Icon id="2064">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
-            <Style id="1997">
-                <IconStyle id="1998">
+            <Style id="2067">
+                <IconStyle id="2068">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1999">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2002">
-                <IconStyle id="2003">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2004">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_blue.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2007">
-                <IconStyle id="2008">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2009">
+                    <Icon id="2069">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="1991">
+            <Placemark id="2061">
                 <name>45B</name>
-                <description> 08-Jan-2022 @ 12:57:45</description>
-                <styleUrl>#1992</styleUrl>
-                <Point id="1990">
-                    <coordinates>-3.989260196685791,50.6539249420166,567.4784</coordinates>
+                <description> 08-Jan-2022 @ 14:17:45</description>
+                <styleUrl>#2062</styleUrl>
+                <Point id="2060">
+                    <coordinates>-3.9853978157043457,50.685038566589355,480.8127</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="1996">
-                <name>35B</name>
-                <description> 08-Jan-2022 @ 12:42:54</description>
-                <styleUrl>#1997</styleUrl>
-                <Point id="1995">
-                    <coordinates>0.0,0.0,-422.0</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2001">
-                <name>35A</name>
-                <description> 08-Jan-2022 @ 12:46:30</description>
-                <styleUrl>#2002</styleUrl>
-                <Point id="2000">
-                    <coordinates>-4.001812934875488,50.71569085121155,361.5256</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2006">
+            <Placemark id="2066">
                 <name>45A</name>
-                <description> 08-Jan-2022 @ 13:07:45</description>
-                <styleUrl>#2007</styleUrl>
-                <Point id="2005">
-                    <coordinates>-4.042947292327881,50.69457650184631,311.6812</coordinates>
+                <description> 08-Jan-2022 @ 15:28:15</description>
+                <styleUrl>#2067</styleUrl>
+                <Point id="2065">
+                    <coordinates>-4.038527011871338,50.70763349533081,295.113281</coordinates>
                 </Point>
             </Placemark>
         </Folder>
