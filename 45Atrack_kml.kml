@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="30">
+    <Document id="1">
         <open>1</open>
-        <Folder id="31">
-            <Style id="34">
-                <IconStyle id="35">
+        <Folder id="2">
+            <Style id="5">
+                <IconStyle id="6">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="36">
+                    <Icon id="7">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
-            <Style id="39">
-                <IconStyle id="40">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="41">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
             <name>inReach</name>
-            <Placemark id="33">
+            <Placemark id="4">
                 <name>45A</name>
                 <description> 07-Jan-2022 @ 20:33:00</description>
-                <styleUrl>#34</styleUrl>
-                <Point id="32">
+                <styleUrl>#5</styleUrl>
+                <Point id="3">
                     <coordinates>-3.293602466583252,50.89796304702759,106.09446</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="38">
-                <name>45B</name>
-                <description> 07-Jan-2022 @ 20:32:30</description>
-                <styleUrl>#39</styleUrl>
-                <Point id="37">
-                    <coordinates>-3.2936882972717285,50.89789867401123,110.17662</coordinates>
                 </Point>
             </Placemark>
         </Folder>
