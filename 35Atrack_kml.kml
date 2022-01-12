@@ -1,79 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="2166">
+    <Document id="9">
         <open>1</open>
-        <Folder id="2167">
-            <Style id="2170">
-                <IconStyle id="2171">
+        <Folder id="10">
+            <Style id="13">
+                <IconStyle id="14">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="2172">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2175">
-                <IconStyle id="2176">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2177">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2180">
-                <IconStyle id="2181">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2182">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2185">
-                <IconStyle id="2186">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2187">
+                    <Icon id="15">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_blue.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="2169">
-                <name>45B</name>
-                <description> 08-Jan-2022 @ 14:17:45</description>
-                <styleUrl>#2170</styleUrl>
-                <Point id="2168">
-                    <coordinates>-3.9853978157043457,50.685038566589355,480.8127</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2174">
-                <name>45A</name>
-                <description> 08-Jan-2022 @ 15:58:30</description>
-                <styleUrl>#2175</styleUrl>
-                <Point id="2173">
-                    <coordinates>-3.7363171577453613,50.73030352592468,149.012619</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2179">
-                <name>35B</name>
-                <description> 08-Jan-2022 @ 15:43:19</description>
-                <styleUrl>#2180</styleUrl>
-                <Point id="2178">
-                    <coordinates>0.0,0.0,-422.0</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2184">
+            <Placemark id="12">
                 <name>35A</name>
-                <description> 08-Jan-2022 @ 16:03:15</description>
-                <styleUrl>#2185</styleUrl>
-                <Point id="2183">
-                    <coordinates>-3.537919521331787,50.710766315460205,12.4895306</coordinates>
+                <description> 07-Jan-2022 @ 20:21:59</description>
+                <styleUrl>#13</styleUrl>
+                <Point id="11">
+                    <coordinates>0.0,0.0,-422.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
