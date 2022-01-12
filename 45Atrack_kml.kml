@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="25">
+    <Document id="46">
         <open>1</open>
-        <Folder id="26">
-            <Style id="29">
-                <IconStyle id="30">
+        <Folder id="47">
+            <Style id="50">
+                <IconStyle id="51">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="31">
+                    <Icon id="52">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
+            <Style id="55">
+                <IconStyle id="56">
+                    <colorMode>normal</colorMode>
+                    <scale>0.2</scale>
+                    <heading>0</heading>
+                    <Icon id="57">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
             <name>inReach</name>
-            <Placemark id="28">
+            <Placemark id="49">
                 <name>45A</name>
-                <description> 07-Jan-2022 @ 20:23:00</description>
-                <styleUrl>#29</styleUrl>
-                <Point id="27">
-                    <coordinates>-3.2935595512390137,50.89790940284729,114.259872</coordinates>
+                <description> 07-Jan-2022 @ 20:33:00</description>
+                <styleUrl>#50</styleUrl>
+                <Point id="48">
+                    <coordinates>-3.293602466583252,50.89796304702759,106.09446</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="54">
+                <name>45B</name>
+                <description> 07-Jan-2022 @ 20:32:30</description>
+                <styleUrl>#55</styleUrl>
+                <Point id="53">
+                    <coordinates>-3.2936882972717285,50.89789867401123,110.17662</coordinates>
                 </Point>
             </Placemark>
         </Folder>
