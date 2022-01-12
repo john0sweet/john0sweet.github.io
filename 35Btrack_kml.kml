@@ -1,60 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="2084">
+    <Document id="1">
         <open>1</open>
-        <Folder id="2085">
-            <Style id="2088">
-                <IconStyle id="2089">
+        <Folder id="2">
+            <Style id="5">
+                <IconStyle id="6">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="2090">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_green.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2093">
-                <IconStyle id="2094">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2095">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_yellow.png</href>
-                    </Icon>
-                </IconStyle>
-            </Style>
-            <Style id="2098">
-                <IconStyle id="2099">
-                    <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="2100">
+                    <Icon id="7">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/pin_purple.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="2087">
-                <name>45B</name>
-                <description> 08-Jan-2022 @ 14:17:45</description>
-                <styleUrl>#2088</styleUrl>
-                <Point id="2086">
-                    <coordinates>-3.9853978157043457,50.685038566589355,480.8127</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2092">
-                <name>45A</name>
-                <description> 08-Jan-2022 @ 15:18:15</description>
-                <styleUrl>#2093</styleUrl>
-                <Point id="2091">
-                    <coordinates>-4.038848876953125,50.707762241363525,334.499969</coordinates>
-                </Point>
-            </Placemark>
-            <Placemark id="2097">
+            <Placemark id="4">
                 <name>35B</name>
-                <description> 08-Jan-2022 @ 15:43:19</description>
-                <styleUrl>#2098</styleUrl>
-                <Point id="2096">
+                <description> 07-Jan-2022 @ 20:21:58</description>
+                <styleUrl>#5</styleUrl>
+                <Point id="3">
                     <coordinates>0.0,0.0,-422.0</coordinates>
                 </Point>
             </Placemark>
