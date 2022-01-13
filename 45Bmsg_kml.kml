@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1065">
+    <Document id="17">
         <open>1</open>
-        <Folder id="1066">
-            <Style id="1069">
-                <IconStyle id="1070">
+        <Folder id="18">
+            <Style id="21">
+                <IconStyle id="22">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1071">
-                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_green.png</href>
+                    <Icon id="23">
+                        <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_%s.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="1068">
+            <Placemark id="20">
                 <name>45B</name>
-                <description>We're all well 08-Jan-2022 @ 10:35:00</description>
-                <styleUrl>#1069</styleUrl>
-                <Point id="1067">
-                    <coordinates>-4.02897834777832,50.66896677017212,580.0</coordinates>
+                <description>We're all well 07-Jan-2022 @ 20:34:00</description>
+                <styleUrl>#21</styleUrl>
+                <Point id="19">
+                    <coordinates>-3.2936882972717285,50.89789867401123,109.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
