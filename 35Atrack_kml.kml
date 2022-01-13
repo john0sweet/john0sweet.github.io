@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="1241">
+    <Document id="201">
         <open>1</open>
-        <Folder id="1242">
-            <Style id="1245">
-                <IconStyle id="1246">
+        <Folder id="202">
+            <Style id="205">
+                <IconStyle id="206">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="1247">
-                        <href>https://www.svgrepo.com/download/302636/map-marker.svg</href>
+                    <Icon id="207">
+                        <href>http://maps.google.com/mapfiles/kml/paddle/blu-blank.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="1244">
+            <Placemark id="204">
                 <name>35A</name>
-                <description> 08-Jan-2022 @ 16:03:15</description>
-                <styleUrl>#1245</styleUrl>
-                <Point id="1243">
-                    <coordinates>-3.537919521331787,50.710766315460205,12.4895306</coordinates>
+                <description> 08-Jan-2022 @ 06:50:57</description>
+                <styleUrl>#205</styleUrl>
+                <Point id="203">
+                    <coordinates>0.0,0.0,-422.0</coordinates>
                 </Point>
             </Placemark>
         </Folder>
