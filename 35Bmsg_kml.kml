@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="593">
+    <Document id="689">
         <open>1</open>
-        <Folder id="594">
-            <Style id="597">
-                <IconStyle id="598">
+        <Folder id="690">
+            <Style id="693">
+                <IconStyle id="694">
                     <colorMode>normal</colorMode>
                     <scale>0.2</scale>
                     <heading>0</heading>
-                    <Icon id="599">
+                    <Icon id="695">
                         <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/msg_purple.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
-            <Placemark id="596">
+            <Placemark id="692">
                 <name>35B</name>
                 <description>We're all well 07-Jan-2022 @ 20:59:00</description>
-                <styleUrl>#597</styleUrl>
-                <Point id="595">
+                <styleUrl>#693</styleUrl>
+                <Point id="691">
                     <coordinates>-3.2935595512390137,50.897791385650635,139.0</coordinates>
                 </Point>
             </Placemark>
