@@ -5,17 +5,16 @@
         <Folder id="266">
             <Style id="269">
                 <IconStyle id="270">
+                    <colo>ff779e1b</color>
                     <colorMode>normal</colorMode>
-                    <scale>0.2</scale>
-                    <heading>0</heading>
-                    <Icon id="271">
+                    <Icon>
                         <href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href>
                     </Icon>
                 </IconStyle>
             </Style>
             <name>inReach</name>
             <Placemark id="268">
-                <name>45A</name>
+                <name>45A - test style</name>
                 <description> 08-Jan-2022 @ 07:16:00</description>
                 <styleUrl>#269</styleUrl>
                 <Point id="267">
