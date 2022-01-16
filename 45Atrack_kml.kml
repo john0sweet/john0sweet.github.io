@@ -46,6 +46,16 @@
                     <coordinates>-3.575127124786377,50.71764349937439,40.9224968</coordinates>
                 </Point>
             </Placemark>
+            <Placemark>
+        <name>TenTors4 Maynard</name>
+        <visibility>true</visibility>
+        <description>TenTors4 Maynard's track log</description>
+        <styleUrl>#linestyle_1229533</styleUrl>
+        <LineString>
+          <tessellate>true</tessellate>
+          <coordinates>-3.103401,51.014306,20</coordinates>
+        </LineString>
+      </Placemark>
         </Folder>
     </Document>
 </kml>
