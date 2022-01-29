@@ -157,7 +157,7 @@
   <Placemark>
     <name>35A</name>
     <visibility>true</visibility>
-    <description>We're all well 1/29/2022 6:47:00 AM</description>
+    <description>We're all well 1/29/2022 6:48:00 AM</description>
     <Point>
       <coordinates>-3.521075,50.722321,0</coordinates>
     </Point>
@@ -175,18 +175,18 @@
   <Placemark>
     <name>45A</name>
     <visibility>true</visibility>
-    <description>We're all well 1/29/2022 6:39:00 AM</description>
+    <description>We're all well 1/29/2022 6:48:00 AM</description>
     <Point>
-      <coordinates>-3.520946,50.722385,0</coordinates>
+      <coordinates>-3.521053,50.722310,0</coordinates>
     </Point>
     <styleUrl>#style_1229538</styleUrl>
   </Placemark>
   <Placemark>
     <name>35B</name>
     <visibility>true</visibility>
-    <description>We're all well 1/8/2022 2:42:00 PM</description>
+    <description>We're all well 1/29/2022 6:49:00 AM</description>
     <Point>
-      <coordinates>-4.063568,50.689801,0</coordinates>
+      <coordinates>-3.521075,50.722343,0</coordinates>
     </Point>
     <styleUrl>#style_1229533</styleUrl>
   </Placemark>
