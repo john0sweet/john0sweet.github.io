@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KML Samples</name>
+    <open>1</open>
+    <description>Unleash your creativity with the help of these examples!</description>
+    <Style id="35A_icon">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/35A_icon.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="35B_icon">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/35B_icon.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="45A_icon">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/45A_icon.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="45B_icon">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/45B_icon.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	    <Style id="35A_msg">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/35A_msg.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="35B_msg">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/35B_msg.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="45A_msg">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/45A_msg.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+	<Style id="45B_msg">
+      <IconStyle>
+        <Icon>
+          <href>https://raw.githubusercontent.com/john0sweet/john0sweet.github.io/main/icons/45B_msg.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    
+    <Folder>
+      <name>Placemarks</name>
+      <description>These are just some of the different kinds of placemarks with
+        which you can mark your favorite places</description>
+      <Placemark>
+        <name>35A Position</name>
+        <visibility>0</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#35A_icon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.084075,52.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>35B Position</name>
+        <visibility>0</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#35B_icon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.184075,52.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>45A Position</name>
+        <visibility>0</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#45A_icon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.284075,52.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>45B Position</name>
+        <visibility>0</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#45B_icon</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.384075,52.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>Floating placemark</name>
+        <visibility>1</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#35A_msg</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.084075,51.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>Floating placemark</name>
+        <visibility>1</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#35B_msg</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.184075,51.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>Floating placemark</name>
+        <visibility>1</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#45A_msg</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.284075,51.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+	  <Placemark>
+        <name>Floating placemark</name>
+        <visibility>1</visibility>
+        <description>Floats a defined distance above the ground.</description>
+        <styleUrl>#45B_msg</styleUrl>
+        <Point>
+          <altitudeMode>relativeToGround</altitudeMode>
+          <coordinates>-2.384075,51.4220033612141,50</coordinates>
+        </Point>
+      </Placemark>
+ 
+    </Folder>
+  </Document>
+</kml>
