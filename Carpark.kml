@@ -34,7 +34,7 @@
 		<Folder>
 			<name>Waypoints</name>
 			<Placemark>
-				<name>Peter Tavy Camp</name>
+				<name>Camp</name>
 				<description></description>
 				<styleUrl>#waypoint</styleUrl>
 				<Style>
@@ -42,7 +42,7 @@
 				</Style>
 				<Point>
 					<altitudeMode>clampedToGround</altitudeMode>
-					<coordinates>-3.2937,50.8978</coordinates>
+					<coordinates>-3.9706,50.5145</coordinates>
 				</Point>
 			</Placemark>
 		</Folder>
